@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TaskForm from "./components/TaskForm";
 import './App.css';
+import TaskList from "./components/TaskList";
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
         task.id === updatedTask.id ? updatedTask : task
       )
     );
-    setTaskToEdit(null); // Clear the form
+    setTaskToEdit(null); 
   };
   return (
     
@@ -31,6 +32,7 @@ const App = () => {
         onUpdate={updateTask}
         taskToEdit={taskToEdit}
       />
+      <TaskList/>
       </div>
     </div>
   );

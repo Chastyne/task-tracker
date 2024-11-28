@@ -5,10 +5,12 @@ import TaskForm from "./components/TaskForm";
 
 const App = () => {
   return (
-    <div>
-      <h1>Task Tracker</h1>
+    
+    <div className="container">
+    <div className="tracker">
+      <h1 >Task Tracker</h1>
       <TaskForm/>
-
+      </div>
     </div>
   );
 };

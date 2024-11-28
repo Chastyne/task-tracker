@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+
 const TaskForm = ({ onAdd, onUpdate, taskToEdit }) => {
   const [task, setTask] = useState({ title: "", description: "" });
 
@@ -23,21 +24,31 @@ const TaskForm = ({ onAdd, onUpdate, taskToEdit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Task Title"
-        value={task.title}
-        onChange={(e) => setTask({ ...task, title: e.target.value })}
-        required
-      />
-      <textarea
-        placeholder="Task Description"
-        value={task.description}
-        onChange={(e) => setTask({ ...task, description: e.target.value })}
-        required
-      />
-      <button type="submit">{taskToEdit ? "Update" : "Add"} Task</button>
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px", maxWidth: "400px" }}>
+      <label>
+        Title:
+        <input
+          type="text"
+          placeholder="Task Title"
+          value={task.title}
+          onChange={(e) => setTask({ ...task, title: e.target.value })}
+          required
+          style={{ width: "100%", padding: "8px", marginBottom: "10px" }}
+        />
+      </label>
+      <label>
+        Description:
+        <textarea
+          placeholder="Task Description"
+          value={task.description}
+          onChange={(e) => setTask({ ...task, description: e.target.value })}
+          required
+          style={{  alignItems:"center", width: "100%", padding: "8px", marginBottom: "10px" }}
+        />
+      </label>
+      <button type="submit" style={{ padding: "10px", backgroundColor: "peachpuff", color: "#000", border: "none", borderRadius: "4px" }}>
+        {taskToEdit ? "Update Task" : "Add Task"}
+      </button>
     </form>
   );
 };

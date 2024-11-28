@@ -1,5 +1,6 @@
 # task-tracker
 A task tracker where users can add, view, and update their tasks.
+The tasks added are displayed below the task input to give a view of the details, title and description.
 
 ## Authors
 Ivy
@@ -23,7 +24,7 @@ CSS
 
 
 ## Live Site
-The live site is hosted on GitHub Pages. You can access it here 
+This site is will be hosted on vercel app.
 
 ## Contact Information
 For inquiries, please contact:

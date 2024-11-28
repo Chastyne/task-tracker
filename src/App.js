@@ -32,7 +32,7 @@ const App = () => {
         onUpdate={updateTask}
         taskToEdit={taskToEdit}
       />
-      <TaskList/>
+      <TaskList tasks={tasks} onEdit={setTaskToEdit}/>
       </div>
     </div>
   );

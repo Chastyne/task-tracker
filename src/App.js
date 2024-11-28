@@ -1,16 +1,19 @@
 
 import './App.css';
+import TaskForm from "./components/TaskForm";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Task Tracker
-        </p>
-      </header>
+    <div>
+      <h1>Task Tracker</h1>
+      <TaskForm/>
+
     </div>
   );
-}
+};
 
 export default App;
+
+
+
